@@ -1113,6 +1113,68 @@
 	369.5.7={
 		effect={ set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
 	}
+	533.2.3={
+		#Make Houndmaster Grebmar his Master of the Hunt
+		effect = {	
+			appoint_court_position = {
+					recipient = character:houndmaster_grebmar
+					court_position = master_of_hunt_court_position
+			}
+		}
+		#And Fineous Darkvire the royal architect
+		#This should actually happen around the time Blackrock Spire finishes construction, since he succeeds Franclorn Forgewright but the date of when that occurs is unclear other than being "centuries before" WoW.
+		effect = {	
+			appoint_court_position = {
+					recipient = character:fineous_darkvire
+					court_position = royal_architect_court_position
+			}
+		}
+		#Make Coren Direbrew his Cupbearer, since it's fairly close to being the Brewer
+		effect = {	
+			appoint_court_position = {
+					recipient = character:coren_direbrew
+					court_position = cupbearer_court_position
+			}
+		}
+		#General Angerforge's adventure guide description mentions him writing a treatise on the failure's of Dagran's clan.
+		effect = {
+			add_opinion = {
+				target = character:general_angerforge
+				modifier = insulted_parent
+				opinion = -50
+			}
+		}
+	}
+	589.11.2={
+		#Repeat the court position changes when he takes the title back
+		effect = {	
+			appoint_court_position = {
+					recipient = character:houndmaster_grebmar
+					court_position = master_of_hunt_court_position
+			}
+		}
+		effect = {	
+			appoint_court_position = {
+					recipient = character:fineous_darkvire
+					court_position = royal_architect_court_position
+			}
+		}	
+		effect = {	
+			appoint_court_position = {
+					recipient = character:coren_direbrew
+					court_position = cupbearer_court_position
+			}
+		}
+		
+	}
+	602.1.1={
+		effect = {	
+			appoint_court_position = {
+					recipient = character:high_interrogator_gerstahn
+					court_position = executioner_court_position
+			}
+		}
+	}
 	640.2.6={ death=yes }
 }
 12050={

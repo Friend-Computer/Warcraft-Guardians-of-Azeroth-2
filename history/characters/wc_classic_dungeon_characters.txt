@@ -1,0 +1,829 @@
+###############################################
+#
+# Dire Maul
+#
+###############################################
+guard_moldar={
+#Adventure Guide for Guard Mol'Dar:
+#"Mol'dar is a zealously loyal guard from the Gordok ogres. He is convinced King Gordok gifted him with a pair of enchanted gauntlets that have enabled him to become his people's arm wrestling champion for six years running. In truth, King Gordok threw the powerful armor away; Mol'dar simply found it first."
+	name=Mol'dar
+	#Going to make each of King Gordok's guards lowborn, so I don't have to invent dynasties for them.
+	culture=ogre religion=gorgog_worship
+	dna = guard_moldar_dna #The dna is mostly to make sure his skin tone matches his WoW appearance. He uses a generic model in WoW, so I just used a random generated ogre's DNA.
+	martial=7 diplomacy=3 stewardship=3 intrigue=3 learning=3 prowess=10 #I give them high prowess to ensure they actually see use as his knights
+	trait=education_martial_2 trait=trusting trait=zealous trait=content
+	disallow_random_traits = yes
+	563.3.17={ birth=yes trait=creature_ogre }
+	579.3.17={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_1
+		# trait=physical_lifestyle_strength_1
+	}
+	604.1.1=
+	{
+		employer = 52326 #Add him to King Gordok's court when he gets landed
+	}
+	656.3.2={ death=yes }
+}
+guard_fengus={
+#Adventure Guide for Guard Fengus:
+#"Ever since Cho'Rush the Observer told him he was destined to meet a mate while on duty, Fengus has spent almost every waking moment patrolling Gordok territory."
+	name=Fengus
+	#Going to make each of King Gordok's guards lowborn, so I don't have to invent dynasties for them.
+	culture=ogre religion=gorgog_worship
+	dna = guard_fengus_dna #The dna is mostly to make sure his skin tone matches his WoW appearance. He uses a generic model in WoW, so I just used a random generated ogre's DNA.
+	martial=6 diplomacy=4 stewardship=3 intrigue=3 learning=4 prowess=8 #I give them high prowess to ensure they actually see use as his knights
+	trait=education_martial_2 trait=lustful trait=diligent trait=trusting
+	disallow_random_traits = yes
+	562.7.19={ birth=yes trait=creature_ogre }
+	578.7.19={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_1
+		# trait=physical_lifestyle_strength_1
+	}
+	604.1.1=
+	{
+		employer = 52326 #Add him to King Gordok's court when he gets landed
+	}
+	653.9.17={ death=yes }
+}
+guard_slipkik={
+#Adventure Guide for Guard Slip'Kik:
+#"Some might think Slip'kik is merely cautious, but he's also lazy. Rather than challenge King Gordok directly, Slip'kik tinkers with traps and old, broken magical devices, hoping to eventually deliver a coup de grace without an ounce of risk or a drop of sweat."
+	name=Slip'kik
+	#Going to make each of King Gordok's guards lowborn, so I don't have to invent dynasties for them.
+	culture=ogre religion=gorgog_worship
+	dna = guard_slipkik_dna #The dna is mostly to make sure his skin tone matches his WoW appearance. He uses a generic model in WoW, so I just used a random generated ogre's DNA.
+	martial=6 diplomacy=2 stewardship=3 intrigue=5 learning=3 prowess=9 #I give them high prowess to ensure they actually see use as his knights
+	trait=education_martial_2 trait=lazy trait=ambitious trait=deceitful
+	disallow_random_traits = yes
+	564.4.16={ birth=yes trait=creature_ogre }
+	580.4.16={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_1
+		# trait=physical_lifestyle_strength_1
+	}
+	604.1.1=
+	{
+		employer = 52326 #Add him to King Gordok's court when he gets landed
+	}
+	659.6.8={ death=yes }
+}
+captain_kromcrush={
+#Adventure Guide for Captain Kromcrush:
+#"Even among ogres, Captain Kromcrush is infamous for his hair-trigger rage toward anyone who dares to insult him or King Gordok. He crushes dissent ruthlessly, but he has still less patience for those who continue to spread the rumor of his torrid affair with a gnoll long ago."
+	name=Kromcrush
+	#Going to make each of King Gordok's guards lowborn, so I don't have to invent dynasties for them.
+	culture=ogre religion=gorgog_worship
+	dna = captain_kromcrush_dna #The dna is mostly to make sure his skin tone matches his WoW appearance. He uses a generic model in WoW, so I just used a random generated ogre's DNA.
+	martial=8 diplomacy=2 stewardship=3 intrigue=2 learning=2 prowess=11 #I give them high prowess to ensure they actually see use as his knights
+	trait=education_martial_2 trait=wrathful trait=lustful trait=impatient
+	sexuality = heterosexual
+	disallow_random_traits = yes
+	560.11.8={ birth=yes trait=creature_ogre }
+	576.11.8={
+		#He has slightly better lifestyle stats than the guards, but still less than King Gordok himself
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		} 
+		# trait=physical_lifestyle_endurance_1
+		# trait=physical_lifestyle_strength_2
+	}
+	603.2.11=
+	{
+		effect = {
+			set_relation_lover = character:29164 #The gnoll lover mentioned in his adventure guide entry
+		}
+	}
+	604.1.1=
+	{
+		employer = 52326 #Add him to King Gordok's court when he gets landed
+		give_council_position = councillor_marshal #The position of Marshal seems like the closest thing to a Captain position I can give him. Maybe the court position of Personal Champion or Bodyguard could also work.
+	}
+	650.3.28={ death=yes }
+}
+observer_chorush={
+#Adventure Guide for Observer Cho'Rush:
+#"Cho'Rush doesn't usually take sides, but when Ulrok was rising to power, it was clear there was nobody who could challenge him. The king quickly appointed Cho'Rush as his chief advisor, believing that his twin heads would make him twice as resourceful as the average ogre."
+	name=Cho'Rush
+	culture=ogre religion=gorgog_worship
+	dna = observer_chorush_dna #The dna is mostly to make sure his skin tone matches his WoW appearance. He uses a generic model in WoW, so I just used a random generated ogre's DNA.
+	martial=2 diplomacy=6 stewardship=4 intrigue=4 learning=3 prowess=5 #I give them high prowess to ensure they actually see use as his knights
+	trait=education_diplomacy_3 trait=fickle trait=forgiving trait=humble
+	disallow_random_traits = yes
+	565.3.20={ birth=yes 
+		trait=creature_ogre 
+		#trait = twoheaded
+		}
+	581.3.20={
+		#During the actual fight, Cho'Rush uses some priest, shaman, and mage spells. The most notable things he does are cast lightning bolt and heal King Gordok, so I'll just give him air and water magic.
+		effect={
+			set_variable = { name = wc_elemental_water_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+			set_variable = { name = wc_elemental_air_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+		} 
+	}
+	604.1.1=
+	{
+		employer = 52326 #Add him to King Gordok's court when he gets landed
+		give_council_position = councillor_chancellor #It's unclear what the title of "observer" really entails, but it seems like the diplomacy court position is the closest thing.
+	}
+	659.2.10={ death=yes }
+}
+stomper_kreeg={
+#Adventure Guide for Stomper Kreeg:
+#"On more than one occasion, skulking assassins have met their doom after accidentally disturbing Kreeg's ale mug. Though he's often passed out drunk on duty, nothing rouses the ogre into a berserker fury faster than the sound of his precious drink splattering on the stone floor."
+	name=Kreeg
+	culture=ogre religion=gorgog_worship
+	dna = stomper_kreeg_dna #The dna is mostly to make sure his skin tone matches his WoW appearance. He uses a generic model in WoW, so I just used a random generated ogre's DNA.
+	martial=7 diplomacy=3 stewardship=2 intrigue=3 learning=3 prowess=9 #I give them high prowess to ensure they actually see use as his knights
+	trait=education_martial_1 trait=lazy trait=wrathful trait=gregarious trait=drunkard
+	disallow_random_traits = yes
+	568.5.21={ birth=yes 
+		trait=creature_ogre 
+		#trait = twoheaded
+		}
+	584.5.21={
+		#During the actual fight, Cho'Rush uses some priest, shaman, and mage spells. The most notable things he does are cast lightning bolt and heal King Gordok, so I'll just give him air and water magic.
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+		} 
+		# trait=physical_lifestyle_endurance_1
+		# trait=physical_lifestyle_strength_1
+	}
+	604.1.1=
+	{
+		employer = 52326 #Add him to King Gordok's court when he gets landed
+		#wanted to set him as master of feasts or cupbearer or something, but Ulrok can't appoint those since he doesn't have a King-tier title.
+	}
+	662.7.13={ death=yes }
+}
+mizzle_the_crafty={
+#There's no adventure guide entry for mizzle the crafty, he comes up after you defeat King Gordok and offers you the tribute chest.
+	name=Mizzle
+	culture=ogre religion=gorgog_worship
+	dna = mizzle_the_crafty_dna #The dna is mostly to make sure his skin tone matches his WoW appearance. He uses a generic model in WoW, so I just used a random generated ogre's DNA.
+	martial=2 diplomacy=4 stewardship=7 intrigue=2 learning=3 prowess=4 #I give them high prowess to ensure they actually see use as his knights
+	trait=education_stewardship_2 trait=fickle trait=humble trait=generous
+	disallow_random_traits = yes
+	566.5.2={ birth=yes 
+		trait=creature_ogre 
+		}
+	604.1.1=
+	{
+		employer = 52326 #Add him to King Gordok's court when he gets landed
+		give_council_position = councillor_steward #Since he handles the tribute for the Gordok King, steward seems like an appropriate title.
+	}
+	663.9.1={ death=yes }
+}
+zevrim_thornhoof={
+	#Zevrim Thornhoof's Adventure Guide Entry:
+	#"Desperate to show his worth to the Burning Legion, Zevrim Thornhoof told his masters he could enslave the formidable ancients who still roamed Dire Maul. When his own power proved insufficient, Thornhoof turned to other living creatures for additional energy, butchering them atop his sacrificial altar and harvesting their essence in their final, agonizing moments."
+	name=Zevrim
+	dynasty=110100
+	culture=satyr religion=burning_legion_religion
+	martial=6 diplomacy=3 stewardship=3 intrigue=6 learning=6
+	trait=education_learning_2 trait=sadistic trait=humble trait=generous
+	disallow_random_traits = yes
+	489.3.12={ 
+		birth=yes trait=creature_satyr trait=being_demon
+	}
+	580.1.1={
+		#I'll give him a little bit of life magic, since the other Warpwood Satyr's have it, and a litte shadow magic, since he uses it during his fight.
+		effect={ 
+				set_variable = { name = wc_life_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+				set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+		}
+	}
+	604.1.1={
+		employer=141205 #Put him in Alzzin's court when he comes into dire maul.
+	}
+	1324.2.24={ death=yes }
+}
+illyanna_ravenoak={
+	#Illyanna Ravenoak Adventure Guide:
+	#"Illyanna Ravenoak, along with her faithful companion Ferra, was once Prince Tortheldrin's most valued hunter, until she refused to carry out her leader's order to execute her friends. As punishment, he killed Illyanna and her bear, but he used his demonic power to bind their spirits to their bodies, condemning them to remain in Dire Maul as undead protectors."
+	name=Illyanna
+	dynasty=127009
+	female=yes
+	culture=highborne religion=arcane_religion
+	martial=8 diplomacy=5 stewardship=7 intrigue=5 learning=6
+	trait=education_martial_3 trait=just trait=brave trait=compassionate
+	disallow_random_traits = yes
+	2.1.23={ birth=yes trait=creature_highborne }
+	20.1.1={ 
+		#Give her a little of strength and dexterity, since that seems to be what most hunter characters have
+		effect={ 
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_dexterity_2
+	}
+	20.1.2={
+		employer=330000
+		trait=being_undead #Tortheldrin killed her and bound her spirit.
+		effect = {
+			set_relation_rival = character:330000 #I imagine she's pretty upset about him massacring everyone and killing her
+			add_opinion = {
+				target = character:330000
+				modifier = hate_opinion #The rivalry alone wasn't working well enough.
+				opinion = -120
+			}
+		}
+		#I also give Tortheldrin a Loyalty hook on her, since he rose he from the dead as a "protector" and presumably has some control over her will, this seems like the easiest way to illustrate that for the time being.
+	}
+	940.11.6={ death=yes }
+}
+lethtendris={
+	#Lethtendris Adventure Guide:
+	#"Dire Maul's warped energy drew Lethtendris from afar, giving her hope of satisfying her unbearable craving for arcane magic. Using the sinews and ligaments of sacrificial victims, she constructed a web to siphon the corrupt power out of the east wing. To her delight, she discovered that the device has the capacity to gather vast reserves of overwhelming strength, enough to destroy all of her enemies."
+	name=Lethtendris
+	#Doesn't have a last name in WoW, presumably lowborn
+	female=yes
+	culture=high_elf religion=cult_of_sunwell
+	martial=5 diplomacy=4 stewardship=4 intrigue=7 learning=7
+	trait=education_martial_3 trait=ambitious trait=vengeful trait=cynical
+	disallow_random_traits = yes
+	22.8.13={ birth=yes trait=creature_high_elf }
+	38.8.13={ 
+		#She has a "craving for arcane magic" so she probably was just a mage initially
+		effect={ 
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+		}
+	}
+	603.10.1={
+		culture=blood_elf #She's a blood elf in WoW, so she becomes a blood elf when the split happens
+	}
+	604.10.23={
+		employer=141205 #She moves into Dire Maul at some point after the Satyrs take control
+		set_variable = { name = wc_disorder_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value } #She starts siphoning corrupt power for magic
+		religion=burning_legion_religion #And gets corrupted
+	}
+	940.11.6={ death=yes }
+}
+###############################################
+#
+# Blackrock Depths
+#
+###############################################
+houndmaster_grebmar={
+	#Houndmaster Grebmar Adventure Guide:
+	#"Grebmar Fleabeard's hounds are the only family he's ever known. Long ago, the orphaned dwarf began breeding canines to serve as companions and guard dogs. When the houndmaster isn't patrolling Blackrock Depths with his loyal beasts, he often treats them to the Grim Guzzler's finest Dark Iron ale."
+	name=Grebmar #Name needed added to localization files. Fortunately, according to WoWhead, he's called Grebmar in English, Spanish, German, and French, so it was easy to localize.
+	dynasty=4544 #His Surname is only mentioned in the Adventure Guide entry, and I can't find non-english versions of the adventure guide entries online. I used a literal translation of the words Flea and Beard, since that seems to be how localization of these compound-word surnames goes in WoW.
+	culture=dark_iron religion=fire_cult
+	dna=houndmaster_grebmar_dna
+	martial=9 diplomacy=3 stewardship=4 intrigue=3 learning=2 prowess=9 #Give him high prowess, since that's used for calculating his aptitude as Master of the Hunt
+	trait=education_martial_2 trait=shy trait=compassionate trait=brave
+	trait=hunter_2 #give him the CK3 hunter trait, as well
+	disallow_random_traits = yes
+	419.5.7={
+		birth=yes trait=creature_dwarf 
+	}
+	533.2.3={
+		effect={
+			#Since he's a houndmaster, it makes sense to give him Hunter traits.
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_dexterity_2
+		employer=12002	#He works for Dagran Thaurissan 
+		set_relation_friend = character:warder_stilgiss	#Stilgiss's Adventure Guide entry mentions the two are friends.
+	}
+	589.11.2={
+		employer=12002 #Return to Blackrock Mountain when Dagran does
+	}
+	#There is also an edit to Dagran's file to make him appoint Grebmar as Master of the Hunt, since the tooltip for the position explicitly mentions tending kennels and the like.
+	#Additionally, being Master of the Hunt requires Grebmar to be a vassal of Dagran, so I have transferred one of the counties previously owned by a seemingly auto-generated character (Their name doesn't correspond to a warcraft NPC and they aren't indicated as a patreon character).
+	640.5.8={ death=yes }
+}
+warder_stilgiss={
+	#Warder Stilgiss Adventure Guide:
+	#"After years of dedication to Emperor Thaurissan, the cunning mage Stilgiss was entrusted with protecting his clan's coffers in the Black Vault. The loyal dwarf's close friend Houndmaster Grebmar celebrated the occasion by gifting one of his vicious dogs--Verek--to Stilgiss. The mage has put the beast to good use, keeping it at his side to scare off the vault's would-be thieves."
+	name=Stilgiss #Stilgiss, like Grebmar, is the same in each language, so he's easily localized.
+	#Warder is presumably a title, so he has no surname. I'll leave him lowborn.
+	culture=dark_iron religion=fire_cult
+	dna=warder_stilgiss_dna
+	martial=4 diplomacy=6 stewardship=6 intrigue=3 learning=8 prowess=4
+	trait=education_stewardship_2 trait=trusting trait=gregarious trait=content
+	disallow_random_traits = yes
+	418.4.6={
+		birth=yes trait=creature_dwarf 
+	}
+	533.2.3={
+		effect={
+			#He exclusively uses frost mage abilities in WoW
+			set_variable = { name = wc_order_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+			set_variable = { name = wc_elemental_water_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+		}
+		employer=12002	#He works for Dagran Thaurissan 
+		set_relation_friend = character:houndmaster_grebmar	#His adventure guide entry mentions he is friends with Grebmar.
+	}
+	589.11.2={
+		employer=12002 #Return to Blackrock Mountain when Dagran does
+	}
+	640.5.8={ death=yes }
+}
+fineous_darkvire={
+	#Fineous Darkvire Adventure Guide:
+	#"Chief Architect Fineous Darkvire earned his title by passing off the ideas of more gifted masons as his own. His arrogance and scheming have drawn the ire of his predecessor, Franclorn Forgewright, from beyond the grave. The ghost of the late chief architect seeks to reclaim his incredibly powerful hammer--Ironfel--from Darkvire before it can be used for ill."
+	#However, in contrast the to Adventure Guide entry, a later short story establishes it was his daughter, Fenella, that stole other architect's plans and presented them as his, and he went with it to prevent her from getting into trouble.
+	name=Fineous #As with the others, I used WoWhead's french, german, and spanish pages to get the localization for his name.
+	dynasty=4545
+	dna=fineous_darkvire_dna
+	culture=dark_iron religion=khazism
+	martial=5 diplomacy=3 stewardship=8 intrigue=3 learning=5 prowess=5
+	trait=education_stewardship_3 trait=arrogant trait=compassionate trait=temperate
+	trait=architect
+	disallow_random_traits = yes
+	345.12.28={
+		birth=yes trait=creature_dwarf 
+	}
+	355.1.1={
+		religion=fire_cult
+	}
+	533.2.3={
+		employer=12002	#He works for Dagran Thaurissan 
+	}
+	589.11.2={
+		employer=12002 #Return to Blackrock Mountain when Dagran does
+	}
+	640.5.8={ death=yes }
+	#As with Grebmar, there's an edit to Dagran to employ Darkvire as his royal architect
+	#Additionally, being Royal Architect requires Grebmar to be a vassal of Dagran, so I have transferred one of the counties previously owned by a seemingly auto-generated character (Their name doesn't correspond to a warcraft NPC and they aren't indicated as a patreon character).
+}
+finella_darkvire={
+	#Finella appears in the short story 'The Jade Hunters' and not Blackrock Depths itself, but given her relation to Fineous, I figured it was best to include her.
+	name=Finella
+	dynasty=4545
+	dna=finella_darkvire_dna
+	female=yes
+	father=fineous_darkvire
+	culture=dark_iron religion=fire_cult
+	martial=4 diplomacy=4 stewardship=5 intrigue=7 learning=5
+	trait=education_stewardship_3 trait=arrogant trait=deceitful trait=craven
+	trait=architect
+	508.9.22={
+		birth=yes trait=creature_dwarf
+	}
+	533.2.3={
+		employer=fineous_darkvire
+	}
+	589.11.2={
+		employer=fineous_darkvire #Return to Blackrock Mountain when Dagran does
+	}
+	640.5.8={ death=yes }
+	#She later works for Moira as chief architect, like her father, but that's later than any of the start dates.
+}
+#I considered also adding Franclorn Forgewright as a rival to Darkvire, but he would be dead well before any of the start dates, so he would have no actual gameplay impact.
+general_angerforge={
+	#General Angerforge Adventure Guide:
+	#"Through a lifetime of study, General Angerforge has become an expert on dwarven military history and tactics. He recently incurred Emperor Dagran Thaurissan's fury by writing a scathing treatise on his clan's failures in past conflicts. This political blunder aside, Angerforge is a Dark Iron to his core. He will bleed--and die, if necessary--to protect his people and his emperor."
+	name=Gimgarn #Angerforge is definitely a Surname, and he has a presumed relative with the same surname in WoW post-BFA, as well as a presumed ancestor in Blackwing Descent, both with Angerforge as a surname. Unfortunately, he doesn't have a first name available anywhere, so I used the first name of another Dark Iron Dwarf from the history file.
+	dynasty=4546 
+	dna=general_angerforge_dna
+	culture=dark_iron religion=khazism
+	martial=8 diplomacy=5 stewardship=3 intrigue=3 learning=5 prowess=8
+	trait=education_martial_4 trait=wrathful trait=zealous trait=vengeful
+	trait=rough_terrain_expert trait=organizer
+	disallow_random_traits = yes
+	325.2.13={
+		birth=yes trait=creature_dwarf 
+	}
+	341.2.13={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
+	}
+	355.1.1={
+		religion=fire_cult
+	}
+	533.2.3={
+		employer=12002	#He works for Dagran Thaurissan 
+		give_council_position = councillor_marshal
+	}
+	580.1.1 = {	#General Angerforge's adventure guide description mentions him writing a treatise on the failure's of Dagran's clan.
+		effect = {
+			add_opinion = {
+				target = character:12002
+				modifier = thinks_liege_incapable_opinion
+				opinion = -50
+			}
+		}
+	}
+	589.11.2={
+		employer=12002 #Return to Blackrock Mountain when Dagran does
+		give_council_position = councillor_marshal
+	}
+	640.5.8={ death=yes }
+	#An opinion modifier has also been added to Dagran to reflect the insult mentioned in the Adventure Guide
+}
+golem_lord_argelmach={
+	#Golem Lord Argelmach Adventure Guide:
+	#"Argelmach's lifelong obsession with immortality drove him to forge enchanted constructs in his own image. Rumor has it that he has also dabbled in some form of black magic that would allow the golem lord's new creations to act as vessels for his spirit should his flesh-and-blood body be destroyed."
+	name=Argelmach
+	dna=golem_lord_argelmach_dna
+	culture=dark_iron religion=fire_cult
+	martial=3 diplomacy=3 stewardship=7 intrigue=3 learning=6 prowess=3
+	trait=education_stewardship_2 trait=patient trait=deceitful trait=paranoid
+	disallow_random_traits = yes
+	423.7.16={
+		birth=yes trait=creature_dwarf 
+	}
+	533.2.3={
+		effect={
+			#He uses lightning-based abilities in his fight, but the adventure guide seems to indicate shadow magic.
+			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+			set_variable = { name = wc_elemental_air_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+		}
+		employer=12002	#He works for Dagran Thaurissan 
+	}
+	589.11.2={
+		employer=12002 #Return to Blackrock Mountain when Dagran does
+	}
+	#In-lore, Argelmach is killed 10 years prior to WoW, and the version of him in the instance is a machine that he's transferred his mind to. There's not a very good way to represent that with traits, so I just have him be normal for the time being.
+	640.5.8={ death=yes }
+}
+hurley_blackbreath={
+	#Hurley Blackbreath Adventure Guide:
+	#"To say Blackbreath is a regular at the Grim Guzzler would be something of an understatement. In over a decade, the mischievous drunkard has left the tavern only once to steal a top-secret recipe for Thunderbrew Lager. Blackbreath has occasionally sobered up enough to make the concoction himself, and he claims it grants unimaginable strength and courage."
+	name=Hurley
+	dna=hurley_blackbreath_dna
+	dynasty=4547
+	culture=dark_iron religion=fire_cult
+	martial=9 diplomacy=4 stewardship=4 intrigue=6 learning=4 prowess=9
+	trait=education_martial_3 trait=gluttonous trait=lazy trait=brave
+	trait=drunkard trait=one_eyed
+	disallow_random_traits = yes
+	453.2.26={
+		birth=yes trait=creature_dwarf 
+	}
+	533.2.3={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_1
+		employer=12002	#He works for Dagran Thaurissan 
+	}
+	589.11.2={
+		employer=12002 #Return to Blackrock Mountain when Dagran does
+	}
+	640.5.8={ death=yes }
+}
+plugger_spazzring={
+	#Plugg Spazzring Adventure Guide:
+	#"They say that at the Grim Guzzler everyone knows your name. This sense of camaraderie is due to the hard work of Spazzring, a leper gnome who sought a new life in Blackrock Depths after the fall of Gnomeregan. Despite his history of dabbling with evil as a warlock, he takes pride in his job as the tavern's barkeep, making sure that his patrons' mugs never run dry."
+	name=Plugger #I'm pretty sure Plugger is his first name and not a title.
+	dynasty=10111
+	culture=gnome religion=rationalism
+	martial=4 diplomacy=8 stewardship=4 intrigue=6 learning=7
+	trait=education_martial_3 trait=trusting trait=generous trait=gregarious
+	disallow_random_traits = yes
+	435.8.12={ 
+		birth=yes trait=creature_gnome 
+	}
+	450.1.1={
+		employer=16000
+	}
+	604.9.15={
+		#I'll make him a leper at the same time Thermaplugg becomes a leper, for consistency
+		trait = leper
+		#He is definitely a warlock, he uses warlock abilities in his fight, and even has a summoned sayaad.
+		effect={ set_variable = { name = wc_disorder_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value } }
+		employer=12002
+	}
+	615.3.18={ death=yes }
+}
+#I was considering adding his Succubus, Mistress Nagmara as well, but there's no way to guarantee she accompanies him during court changes other than making her his wife, but it's clear in game that they're not even lovers.
+ambassador_flamelash={
+	#Ambassador Flamelash Adventure Guide:
+	#"For his unwavering service to Ragnaros, Flamelash ascended to the rank of ambassador to the Dark Iron clan. This depraved being initially despised his dwarven allies, but he has come to respect their penchant for destruction. As a show of solidarity, Flamelash guards the Chamber of Enchantment, a sacred location used by the dwarves to empower their weaponry."
+	name=Flamelash
+	culture=ignan religion=fire_cult
+	martial=7 diplomacy=5 stewardship=1 intrigue=3 learning=6
+	trait=education_martial_3 
+	trait=diligent trait=arrogant trait=fickle 
+	disallow_random_traits = yes
+	2.1.1={ birth=yes trait=creature_flamewaker }
+	533.2.3={
+		effect={
+			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
+		}
+		employer=12002	#He works for Dagran Thaurissan 
+	}
+	589.11.2={
+		employer=12002 #Return to Blackrock Mountain when Dagran does
+	}
+	620.1.1={ death=yes }
+}
+high_interrogator_gerstahn={
+	#High Interrogator Gerstahn Adventure Guide:
+	#"The Twilight's Hammer cultist Gerstahn has always indulged in life's finer things: exotic foods, fine clothes, and gem-encrusted torture tools. Day and night, her prisoners' bloodcurdling cries echo throughout the Dark Iron clan's infamous Detention Block. Gerstahn proudly calls this horrific noise her symphony of screams, and she is always eager to add another voice to the chorus."
+	name=Gerstahn #Gerstahn sounds more like a surname, but given the absence of any indicated first name, I'll keep her lowborn and just call her Gerstahn
+	female=yes
+	dna=high_interrogator_gerstahn_dna
+	culture=azerothian religion=holy_light #I'm making the assumption she's originally from somewhere in Stormwind, given its proximity to Blackrock Mountain
+	martial=5 diplomacy=4 stewardship=3 intrigue=8 learning=6
+	trait=education_intrigue_2 trait=sadistic trait=diligent trait=arbitrary
+	disallow_random_traits = yes
+	trait=torturer
+	579.4.23={ birth=yes trait=creature_human }
+	589.11.1={
+		#At some point, she joins the Twilight's Hammer
+		religion=cthun_worship
+		employer=52000
+		trait=lunatic
+		effet={
+			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+		}
+	}
+	#Later, she is sent to Blackrock Mountatin
+	602.1.1={
+		employer=12002
+	}
+	#An edit has also been made to Dagran to make him employ her as his Executioner, since that's the closest court position to "High Interrogator"
+}
+pyromancer_loregrain={
+	#Pyromancer Loregrain Adventure Guide:
+	#"Once a respected member of the Earthen Ring, Loregrain joined the Twilight's Hammer cult for reasons that remain a mystery to his former allies. He eventually journeyed to Blackrock Depths, where he took a sudden interest in the famed Dark Iron architect Franclorn Forgewright. The purpose of his current obsession is unclear, but Loregrain remains loyal to his cult and an enemy of all who oppose it."
+	name=Loregrain #Similarly to Gerstahn, this seems more like a surname, but since Loregrain never holds any land and doesn't have any other name mentioned, I'll keep him as just "Loregrain"
+	culture=tauren religion=earth_mother_worship
+	martial=7 diplomacy=7 stewardship=5 intrigue=2 learning=7
+	trait=education_learning_2 trait=arbitrary trait=fickle trait=calm
+	disallow_random_traits = yes
+	552.10.21={ birth=yes trait=creature_tauren }
+	572.1.1={
+		effect={
+			#He was formerly a shaman of the Earthen Ring
+			set_variable = { name = wc_elemental_fire_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
+			set_variable = { name = wc_elemental_air_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+			set_variable = { name = wc_elemental_earth_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+		}
+	}
+	591.9.1={
+		#At some point, he joins the Twilight's Hammer
+		religion=cthun_worship
+		employer=52000
+	}
+	#And then later comes to Blackrock Mountain, presumably at the same time as Gerstahn, since they're both from the Twilight's Hammer
+	602.1.1={
+		employer=12002
+	}
+}
+coren_direbrew={
+	name=Coren
+	dynasty=4548
+	dna=coren_direbrew_dna
+	culture=dark_iron religion=fire_cult
+	martial=9 diplomacy=5 stewardship=3 intrigue=3 learning=6 prowess=9
+	trait=education_martial_3 trait=arrogant trait=diligent trait=stubborn
+	trait=drunkard trait=one_eyed
+	disallow_random_traits = yes
+	442.8.20={
+		birth=yes trait=creature_dwarf 
+	}
+	533.2.3={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_strength_2
+		employer=12002	#He works for Dagran Thaurissan 
+	}
+	589.11.2={
+		employer=12002 #Return to Blackrock Mountain when Dagran does
+	}
+	640.5.8={ death=yes }
+	#An edit has been made to Dagran to make him employ Coren as his Cup-Bearer, since the tooltip explicitly mentions serving drinks, and it's the closest there is to a "brewer" title.
+}
+###############################################
+#
+# Blackrock Spire
+#
+###############################################
+#A lot of the bosses for BRS are dragonspawn or non-named, so there's actually pretty few characters to add.
+ghok_bashguud={
+	#No Adventure Guide entry is available for Ghok Bashguud, I assume because he's just a rare spawn in LBRS. He does have the title of "Bloodaxe Champion" though.
+	name=Ghok
+	culture=blackrock religion=orcish_fel
+	dynasty=2759
+	martial=5 diplomacy=3 stewardship=2 intrigue=3 learning=2 prowess=7
+	trait=education_martial_2
+	#I'll just let him have random traits, since there's not even an Adventure Guide to go off of.
+	560.4.4={ 
+		birth=yes trait=creature_orc 
+	}
+	576.4.4={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
+	}
+	589.11.2={
+		employer=10002 #Become a courtier of Dal'Rend when he takes rulership of Blackrock.
+	}
+	608.4.7={ death=yes } #Have him die at the same time Dal'Rend does, in a presumed raid on Blackrock Spire.
+}
+bannok_grimaxe={
+	#No Adventure Guide entry is available for Bannok Grimaxe, either.
+	name=Bannok
+	culture=blackrock religion=orcish_fel
+	dynasty=2760
+	martial=6 diplomacy=5 stewardship=3 intrigue=1 learning=2 prowess=6
+	trait=education_martial_2
+	#I'll just let him have random traits, like Bashguud
+	561.10.20={ 
+		birth=yes trait=creature_orc 
+	}
+	577.10.20={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
+	}
+	589.11.2={
+		employer=10002 #Become a courtier of Dal'Rend when he takes rulership of Blackrock.
+	}
+	608.4.7={ death=yes } #Have him die at the same time Dal'Rend does, in a presumed raid on Blackrock Spire.
+}
+quartermaster_zigris={
+	#Quartermaster Zigris Adventure Guide:
+	#"After the First War, the orc hunter Zigris became infamous for tracking down Stormwind refugees and slaughtering them like game. He loathes Blackrock Spire's claustrophobic halls, but he is certain a day will come when he'll hunt in the open air again."
+	name=Zigris
+	culture=blackrock religion=orcish_fel
+	martial=6 diplomacy=3 stewardship=5 intrigue=1 learning=2 prowess=7
+	trait=education_martial_2 trait=sadistic trait=hunter_2 trait=zealous trait=diligent
+	disallow_random_traits = yes
+	564.6.23={ 
+		birth=yes trait=creature_orc 
+	}
+	580.6.23={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
+	}
+	583.1.1={
+		employer=10000 #BEcome a courtier of Blackhand, since he was apparently active during the First War.
+	}
+	589.11.2={
+		employer=10002 #Become a courtier of Dal'Rend when he takes rulership of Blackrock.
+	}
+	608.4.7={ death=yes } #Have him die at the same time Dal'Rend does, in a presumed raid on Blackrock Spire.
+}
+#Voone already exists as a character, so I don't need to make him. However, I have made an edit to his history, changing him to follow Amism and have religious exemption as part of his contract under Dal'Rend.
+#Voone's adventure guide entry states that he doesn't follow Dal'Rend's ideology, and is supporting him for "the satisfaction of overcoming unsurmountable odds," so it seems appropriate he doesn't share Dal'Rend's religion.
+shadowhunter_voshgajin={
+	#Shadowhunter Vosh'Gajin Adventure Guide:
+	#"Vosh'gajin is renowned for her beauty--and psychotic tendencies--among the trolls. A master of the shadow hunter arts, she wields formidable hexes, curses, and healing magics."
+	name=Vosh'Gajin
+	female=yes
+	culture=amani religion=amism
+	martial=5 diplomacy=3 stewardship=3 intrigue=6 learning=6
+	trait=education_martial_2 trait=wrathful trait=sadistic trait=cynical trait=beauty_good_2
+	disallow_random_traits = yes
+	545.12.4={ birth=yes trait=creature_troll }
+	561.12.4={
+		#She uses shadow magic in her fight, so let's give her shadow magic.
+		effet={
+			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_magic_trait_value }
+		}
+	}
+	589.11.1={
+		employer=9020 #Go to Voone's court when he gets land under Dal'Rend
+	}
+	620.4.17={ death=yes } #Have her die at the same time Voone does
+}
+kilram={
+	#Kilram is a blacksmithing trainer in Everlook that teaches the Axesmithing Specialty. The quest to unlock Axesmithing has you kill Vosh'Gajin for him, and states that they are former lovers, so I'm adding him in order to create that Lover relation between them.
+	name=Kilram
+	culture=gurubashi religion=gurubism
+	martial=9 diplomacy=3 stewardship=7 intrigue=2 learning=5 prowess=6
+	trait=martial_learning_2 trait=diligent trait=lustful trait=patient
+	disallow_random_traits = yes
+	575.1.1={ 
+		birth=yes trait=creature_troll 
+	}
+	595.1.1={
+		effect = {
+			set_relation_lover = character:shadowhunter_voshgajin
+		}
+		trait=scarred #In the quest text he mentions she scarred him as a "love tap"
+	}
+	603.10.12={
+		employer=64200 #Go to Everlook once it's settled
+		effect={ #And if the player has royal court on, give him a weapon inspiration, since he's a blacksmith
+			if = {
+				limit = {
+					has_dlc_feature = royal_court
+				}
+				create_inspiration = weapon_inspiration
+			}
+		}
+	}
+	632.9.5={ death=yes }
+}
+highlord_omokk={
+	#Highlord Omokk Adventure Guide:
+	#"Omokk rules over the spire's ogres with an iron fist. Many underlings have challenged him to single combat in the hopes of seizing the highlord's title, but all have fallen without landing a solitary blow. This mysterious phenomenon has led to rumors that dark magic is protecting Omokk."
+	name=Omokk
+	culture=ogre religion=orcish_fel
+	martial=8 diplomacy=2 stewardship=4 intrigue=2 learning=4 prowess=8
+	trait=education_martial_4 trait=trusting trait=brave trait=arrogant trait=physique_good_3
+	disallow_random_traits = yes
+	550.2.25={ birth=yes trait=creature_ogre }
+	570.1.1={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_3
+		# trait=physical_lifestyle_strength_3
+	}
+	589.11.1={
+		#Join Urok Doomhowl when he gets land under Dal'Rend
+		employer=52310
+		give_council_position = councillor_marshal
+		#Omokk is supposed to be the ruler of the Spirestone ogres, with Urok being the "real ruler" that's pulling the strings behind him, but this is hard to capture with CK3's mechanics, so I just made him the marshal and personal bodyguard of Urok. Maybe the upcoming Diarch mechanics can change things.
+	}
+	620.1.5={ death=yes } #Die at the same time Urok does
+}
+goraluk_anvilcrack={
+	#A named orc boss from the original Upper Blackrock spire, he has the title of armorsmith and is associated with some blacksmithing quests.
+	name=Goraluk
+	culture=blackrock religion=orcish_fel
+	dynasty=2761
+	martial=5 diplomacy=3 stewardship=4 intrigue=3 learning=4 prowess=7
+	trait=education_martial_2
+	563.5.3={ 
+		birth=yes trait=creature_orc 
+	}
+	579.5.3={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_1
+		# trait=physical_lifestyle_strength_2
+	}
+	589.11.2={
+		employer=10002 #Become a courtier of Dal'Rend when he takes rulership of Blackrock.
+		effect={ #And if the player has royal court on, give him an armor inspiration, since he's an armorsmith
+			if = {
+				limit = {
+					has_dlc_feature = royal_court
+				}
+				create_inspiration = armor_inspiration
+			}
+		}
+	}
+	608.4.7={ death=yes } #Have him die at the same time Dal'Rend does, in a presumed raid on Blackrock Spire.
+}
+jed_runewatcher={
+	#Jed Runewatcher is a rarespawn orc in Upper Blackrock Spire. He doesn't have any lore or associated quests to characterize him, I'm pretty much just adding him for the sake of completeness.
+	name=Jed
+	culture=blackrock religion=orcish_fel
+	dynasty=2762 #Interestingly, his name is still "Jed Runewatcher" in the french translation of WoW, but his surname is different in the Spanish and German versions
+	martial=4 diplomacy=5 stewardship=2 intrigue=4 learning=3 prowess=6
+	trait=education_martial_3
+	563.6.19={ 
+		birth=yes trait=creature_orc 
+	}
+	579.6.19={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_1
+	}
+	589.11.2={
+		employer=10002 #Become a courtier of Dal'Rend when he takes rulership of Blackrock.
+	}
+	608.4.7={ death=yes } #Have him die at the same time Dal'Rend does, in a presumed raid on Blackrock Spire.
+}
+#And then the remaining blackrock spire characters are elementals, drakonids, dragonspawn, or other races not implemented in the current version of GoA, so that wraps up Blackrock Spire.

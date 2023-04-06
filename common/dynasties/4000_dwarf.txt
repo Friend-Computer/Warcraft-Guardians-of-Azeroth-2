@@ -2185,3 +2185,23 @@
 # 	name = "dynn_Stormborn" 
 # 	culture=irondwarf
 # }
+ 4544 = {
+ 	name = "dynn_Fleabeard" 
+ 	culture=dark_iron
+ }
+ 4545 = {
+ 	name = "dynn_Darkvire" 
+ 	culture=dark_iron
+ }
+ 4546 = {
+ 	name = "dynn_Angerforge" 
+ 	culture=dark_iron
+ }
+ 4547 = {
+ 	name = "dynn_Blackbreath" 
+ 	culture=dark_iron
+ }
+ 4548 = {
+ 	name = "dynn_Direbrew" 
+ 	culture=dark_iron
+ }

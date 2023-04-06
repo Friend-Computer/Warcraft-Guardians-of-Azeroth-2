@@ -401,7 +401,8 @@ c_brudarn = {
 		holder=11008 #Grimgas Craggrip
 	}
 	588.1.1={
-		holder=11009 #Grimdor Craggrip
+		holder=houndmaster_grebmar
+		liege=k_blackrock
 	}
 	637.10.17={
 		holder=11010 #Gremdar Craggrip
@@ -440,7 +441,8 @@ c_drognur = {
 		holder=11008 #Grimgas Craggrip
 	}
 	400.1.1={
-		holder=13019
+		holder=fineous_darkvire
+		liege=k_blackrock
 	}
 }
 c_brugodun = {

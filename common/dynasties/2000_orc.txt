@@ -3053,3 +3053,19 @@ warsong3 = { name = "dynn_Laughinglash" culture = warsong }
 	name = "dynn_Halforcen"
 	culture = stormreaver
 }
+2759 = {
+	name = "dynn_Bashguud" 
+	culture = blackrock
+}
+2760 = {
+	name = "dynn_Grimaxe" 
+	culture = blackrock
+}
+2761 = {
+	name = "dynn_Anvilcrack" 
+	culture = blackrock
+}
+2762 = {
+	name = "dynn_Runewatcher" 
+	culture = blackrock
+}
