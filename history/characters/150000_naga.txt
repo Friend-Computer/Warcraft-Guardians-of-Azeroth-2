@@ -92,14 +92,15 @@
 		# trait=physical_lifestyle_endurance_2
 		# trait=physical_lifestyle_strength_2
 	}
-	25.1.1={
-		effect = {
-			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
-				purge_historical_character_effect = yes
-			}
-		}
-	}
+	#Commented out the purging of this character so that the Twilight Hammer Orcs in Blackfathom Deeps could use him as their liege
+	#25.1.1={
+	#	effect = {
+	#		if = {
+	#			limit = { NOT = { current_date >= 603.1.1 } }
+	#			purge_historical_character_effect = yes
+	#		}
+	#	}
+	#}
 	881.3.27={ death=yes }
 }
 150126={
