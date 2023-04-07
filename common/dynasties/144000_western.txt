@@ -97,4 +97,4 @@
 # 144096 = { name = "dynn_Bradford" culture = western }
 # 144097 = { name = "dynn_Noire" culture = western }
 # 144098 = { name = "dynn_Smither" culture = western }
-# 144099 = { name = "dynn_Jett" culture = western }
+ 144099 = { name = "dynn_Jett" culture = western }

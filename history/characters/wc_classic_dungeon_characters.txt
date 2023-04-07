@@ -545,7 +545,7 @@ high_interrogator_gerstahn={
 	disallow_random_traits = yes
 	trait=torturer
 	579.4.23={ birth=yes trait=creature_human }
-	589.11.1={
+	603.1.1={
 		#At some point, she joins the Twilight's Hammer
 		religion=cthun_worship
 		employer=52000
@@ -555,7 +555,7 @@ high_interrogator_gerstahn={
 		}
 	}
 	#Later, she is sent to Blackrock Mountatin
-	602.1.1={
+	604.1.1={
 		employer=12002
 	}
 	#An edit has also been made to Dagran to make him employ her as his Executioner, since that's the closest court position to "High Interrogator"
@@ -577,13 +577,13 @@ pyromancer_loregrain={
 			set_variable = { name = wc_elemental_earth_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
 		}
 	}
-	591.9.1={
+	603.1.1={
 		#At some point, he joins the Twilight's Hammer
 		religion=cthun_worship
 		employer=52000
 	}
 	#And then later comes to Blackrock Mountain, presumably at the same time as Gerstahn, since they're both from the Twilight's Hammer
-	602.1.1={
+	604.1.1={
 		employer=12002
 	}
 }
@@ -827,3 +827,111 @@ jed_runewatcher={
 	608.4.7={ death=yes } #Have him die at the same time Dal'Rend does, in a presumed raid on Blackrock Spire.
 }
 #And then the remaining blackrock spire characters are elementals, drakonids, dragonspawn, or other races not implemented in the current version of GoA, so that wraps up Blackrock Spire.
+###############################################
+#
+# Blackfathom Deeps
+#
+###############################################
+#The whole premise of Blackfathom Deeps is that these twilight hammer cultists are nurturing Aku'Mai, a hydra, to use as a weapon later. 
+#I think it could be cool to have some special event chain where the player uses resources to feed and grow Aku'Mai, then gets a big regiment of event troops to wreak havoc with at the end
+#I'll keep it in mind and come back to the idea when I have a bit more experience with setting events up.
+twilight_lord_kelris={
+	#Twilight Lord Kelris Adventure Guide:
+	#"When the cultists found a strange three-headed creature in the belly of Blackfathom Deeps, Twilight Lord Kelris was convinced the hydra was a herald of the Old Gods' return to Azeroth... and his ticket to immortality. Kelris personally supervises the growth of the monster, even feeding him his own subjects to satisfy his wild hunger."
+	name=Kelris
+	culture=twilights_hammer religion=orcish_fel
+	martial=5 diplomacy=3 stewardship=4 intrigue=6 learning=7
+	trait=education_intrigue_3 trait=arrogant trait=callous trait=patient
+	disallow_random_traits = yes
+	560.3.24={ birth=yes trait=creature_orc }
+	575.6.18={ #Set up him having some fel magic in earlier start dates, since he'll be at Cho'Gall's court in them.
+		effect={ set_variable = { name = wc_disorder_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
+	}
+	583.1.1={
+		employer = 52000
+	}
+	603.1.1={
+		religion = cthun_worship
+		effect={ #He switches to C'thun worship and shadow magic when Cho'Gall does, presumably following him.
+			add_character_flag = { flag = wc_disorder_magic_lifestyle_perks_were_reset_flag }
+			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value }
+		}
+	}
+	#No specific date is given for him becoming Lord of Blackfathom Deeps. I placed it between Reign of Chaos and Frozen Throne, since Cho'Gall has JUST landed in Kalimdor at Reign of Chaos
+	#The Naga Count that previously held Zoram Strand and Blackfathom Deeps become Duke of Zoram and liege of Kelriss on 604.1.1
+	#I made him a vassal to try and preserve the original map state as much as possible, but I can definitely see a case for him being the liege of the Zoram naga instead.
+	611.7.23={ #He gets killed by Twilight Lord Bathiel shortly after the Cataclysm
+		death = yes
+	}
+}
+lady_sarevess={
+	#Lady Sarevess Adventure Guide:
+	#"The Twilight's Hammer granted Lady Sarevess her own private cove within Blackfathom Deeps, continuously sending her fresh sacrifices. The cultists hope that her rituals and research will result in magical protection that will allow them to worship the terrifying hydra at the deeps' core without fear of becoming his next meal."
+	name=Sarevess
+	female=yes
+	culture=naga religion=cthun_worship #Most Naga are Nzothi, but Sarevess is a member of the Twilight Hammer, which is Cthunni, so I've made her Cthunni
+	martial=8 diplomacy=5 stewardship=6 intrigue=6 learning=5
+	trait=education_learning_3
+	trait=patient trait=diligent trait=cynical
+	disallow_random_traits = yes
+	2.5.5={ birth=yes trait=creature_naga trait = being_void }
+	20.1.1={
+		effect={
+			#She uses lightning bolt and frost nova during her fight, indicating some use of those elements, and is a member of the twilight hammer, so I'll give her some shadow, too
+			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+			set_variable = { name = wc_elemental_water_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+			set_variable = { name = wc_elemental_air_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+		}
+	}
+	604.1.1={
+		employer=twilight_lord_kelris
+	}
+	611.7.23={ death=yes } #She also gets killed by the new bosses during the Cataclysm revamp
+}
+lorgus_jett={
+	#Lorgus Jett is just a named rare spawn, so he doesn't have an adventure guide entry.
+	#Since he's a human Twilight Hammer member, I'm just having him follow the same trajectory as Gerstahn
+	name=Lorgus
+	dynasty=144099 #A Jett dynasty already existed in the files, commented out, so I uncommented it to use for him.
+	culture=azerothian religion=holy_light 
+	martial=5 diplomacy=3 stewardship=4 intrigue=6 learning=8
+	579.4.23={ birth=yes trait=creature_human }
+	603.1.1={
+		religion=cthun_worship
+		employer=52000
+		trait=lunatic
+		effet={
+			set_variable = { name = wc_shadow_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+			#He uses lightning bolt and lightning shield
+			set_variable = { name = wc_elemental_air_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_1_magic_trait_value }
+		}
+	}
+	604.1.1={
+		employer=twilight_lord_kelris
+	}
+	611.7.23={ death=yes } #Killed during the revamp
+}
+gelihast={
+	#Gelihast Adventure Guide:
+	#"The Old Gods called, and Gelihast answered, forcing his way into Blackfathom Deeps and slaughtering nearly a dozen surprised Twilight's Hammer cultists with his twin swords. Impressed by his ferocity and brutality, the cult allowed him to stay, and he built his own shrine to offer sacrifices and receive blessings from the ominous presence in the temple ruins."
+	#One of the few classic dungeon fights I actually remember, this guy had really high attack speed. Also he had a murloc model holding swords, which was atypical.
+	name=Gelihast
+	culture=murloc religion=cthun_worship 
+	martial=8 diplomacy=1 stewardship=1 intrigue=3 learning=2 prowess=8
+	trait=sadistic trait=brave trait=gluttonous trait=blademaster_3
+	disallow_random_traits = yes
+	563.6.14={ birth=yes trait=creature_murloc }
+	579.6.14={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
+	}
+	604.3.13={ #The way his Adventure Guide is written, he definitely joined after the initial Twilight Hammer acquisition
+		trait=murderer
+		employer=twilight_lord_kelris
+	}
+	611.7.23={ death=yes } #Killed during the revamp
+}

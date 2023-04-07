@@ -180,6 +180,9 @@ c_jalysia = {
 d_zoram = {
 	1.1.1 = {
 	}
+	604.1.1={
+		holder=150125
+	}
 }
 c_zoram = {
 	25.1.1={holder=35200} #Mrhgh[6025]
@@ -245,5 +248,9 @@ c_blackfathom = {
 	#Naga
 	603.1.1={
 		holder=150125
+	}
+	604.1.1={
+		holder=twilight_lord_kelris
+		liege=d_zoram
 	}
 }
