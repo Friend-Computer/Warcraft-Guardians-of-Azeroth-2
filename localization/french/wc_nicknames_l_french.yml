@@ -84,3 +84,6 @@
  nick_the_dissector:0 "[CHARACTER.Custom('FR_LeLa')] Disséqueu[CHARACTER.Custom('FR_RSe')]"
  nick_the_bloodseeker:0 "[CHARACTER.Custom('FR_LeLa')] Cherche-sang"
  nick_the_poisoned_mind:0 "L'Esprit empoisonné"
+ 
+ nick_mr_smite:0 "M. Chatiment"
+ nick_the_cook:0 "le Cuisinier"

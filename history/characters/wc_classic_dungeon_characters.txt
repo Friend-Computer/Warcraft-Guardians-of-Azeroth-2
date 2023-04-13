@@ -935,3 +935,183 @@ gelihast={
 	}
 	611.7.23={ death=yes } #Killed during the revamp
 }
+###############################################
+#
+# The Deadmines
+#
+###############################################
+#I'm using the classic version of the Deadmines instance, so there's no Adventure Guides to reference here.
+rhahkzor={
+	name=Rhahk'zor
+	culture=ogre religion=gorgog_worship
+	martial=8 diplomacy=4 stewardship=6 intrigue=3 learning=3 prowess=9
+	trait=education_martial_2 trait=greedy trait=callous trait=brave trait=physique_good_2
+	trait=logistician #He IS the foreman
+	disallow_random_traits = yes
+	578.2.24={ birth=yes trait=creature_ogre }
+	590.1.1={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_2
+	}
+	596.1.1={ religion = burning_legion_religion } #Switches to fel religion when appropriate for the first war
+	598.3.17={ #When Edwin gets land in Westfall, Rhak'zor joins the defias brotherhood
+		religion = masonry
+        employer = 5811 
+		effect = { #Because of their different cultures, they had low opinions of each other, this should fix it.
+			add_opinion = {
+				target = character:5811
+				modifier = hired_me_opinion
+				opinion = +80
+			}
+		}	
+    }
+	608.4.11={ death=yes } #Dies when Edwin VanCleef does
+}
+sneed={
+	name=Sneed
+	culture=goblin religion=cult_of_wealth
+	martial=6 diplomacy=4 stewardship=9 intrigue=6 learning=6
+	trait=education_stewardship_3 trait=stubborn trait=diligent trait=content trait=intellect_good_2
+	disallow_random_traits = yes
+	571.8.11={ 
+		birth=yes trait=creature_goblin 
+	}
+	598.3.17={ #When Edwin gets land in Westfall, Sneed joins the defias brotherhood
+		religion = masonry
+        employer = 5811 
+		effect = { #Because of their different cultures, they had low opinions of each other, this should fix it.
+			add_opinion = {
+				target = character:5811
+				modifier = hired_me_opinion
+				opinion = +80
+			}
+		}	
+    }
+	608.4.11={ death=yes } #Dies when Edwin VanCleef does
+}
+gilnid={
+	name=Gilnid
+	culture=goblin religion=cult_of_wealth
+	martial=5 diplomacy=2 stewardship=5 intrigue=6 learning=9
+	trait=education_learning_3 trait=humble trait=diligent trait=callous trait=intellect_good_2
+	disallow_random_traits = yes
+	571.8.11={ 
+		birth=yes trait=creature_goblin 
+	}
+	598.3.17={ #When Edwin gets land in Westfall, Gilnid joins the defias brotherhood
+		religion = masonry
+        employer = 5811
+		effect = { #Because of their different cultures, they had low opinions of each other, this should fix it.
+			add_opinion = {
+				target = character:5811
+				modifier = hired_me_opinion
+				opinion = +80
+			}
+		}	
+		effect={ #He's the "head smelter" so we'll give him a metalcrafting-related inspiration
+			if = {
+				limit = {
+					has_dlc_feature = royal_court
+				}
+				create_inspiration = smith_inspiration
+			}
+		}
+    }
+	608.4.11={ death=yes } #Dies when Edwin VanCleef does
+}
+mr_smite={
+	#WoWpedia includes some speculation that an NPC in Pandaria name "Yorik Sharpeye" is, in fact, Mr Smite. The reasoning given is compelling, he drops some of Mr. Smite's personal affects, and the flavor text for Mr. Smite's card in Hearthstone suggests his first name is "Yorik"
+	name=Yorik
+	dynasty=1160026
+	culture=tauren religion=earth_mother_worship
+	martial=8 diplomacy=2 stewardship=3 intrigue=6 learning=3 prowess=9
+	trait=education_martial_3 trait=sadistic trait=brave trait=arrogant
+	trait=aggressive_attacker trait=physique_good_2 trait=blademaster_3 #He wields a bunch of different weapons in the Deadmines fight, so blademaster seems pretty appropriate
+	disallow_random_traits = yes
+	568.3.25={ 
+		birth=yes trait=creature_tauren
+	}
+	590.1.1={
+		effect={
+			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+		}
+		# trait=physical_lifestyle_endurance_2
+		# trait=physical_lifestyle_strength_3
+	}
+	598.3.17={ #When Edwin gets land in Westfall, Yorik joins the defias brotherhood
+		religion = masonry
+        employer = 5811
+		effect = { #Because of their different cultures, they had low opinions of each other, this should fix it.
+			add_opinion = {
+				target = character:5811
+				modifier = hired_me_opinion
+				opinion = +80
+			}
+		}	
+		give_nickname=nick_mr_smite #I made a custom nickname for him. 
+    }
+	608.4.11={ #He outlives Edwin
+	remove_nickname = yes #No longer goes by "Mr. Smite" though...
+	}
+	623.7.13={death=yes}
+}
+cookie_the_cook={
+	name=Cookie
+	culture=murloc religion=water_deities
+	martial=4 diplomacy=7 stewardship=5 intrigue=3 learning=5
+	trait=education_diplomacy_2 trait=gluttonous trait=compassionate trait=generous
+	trait=comfort_eater trait=reveler_1 #There's not a trait for cooking, so reveler is the closest thing.
+	disallow_random_traits = yes	
+	568.3.20={ birth=yes trait=creature_murloc }
+	598.3.17={ #When Edwin gets land in Westfall, Cookie joins the defias brotherhood
+		religion = masonry
+        employer = 5811
+		effect = { #Because of their different cultures, they had low opinions of each other, this should fix it.
+			add_opinion = {
+				target = character:5811
+				modifier = hired_me_opinion
+				opinion = +80
+			}
+		}	
+		give_nickname=nick_the_cook #For localization of both Cookie's name and title, I looked at the translations of his Hearthstone Card, "Cookie the Cook," as opposed to WoWhead data like I typically use.
+   }
+	608.4.11={ #He outlives Edwin, and goes on to work under Vanessa.
+	employer = 5812
+	}
+	620.9.13={ death=yes } #Dies when Vanessa does
+}
+captain_greenskin={
+	name=Greenskin #He suffers a bit from the same problem as Gerstahn, where his in-game name "Greenskin" is clearly a surname, but we have no idea what his first name is.
+	culture=goblin religion=cult_of_wealth
+	martial=6 diplomacy=6 stewardship=3 intrigue=4 learning=4
+	trait=education_martial_2 trait=stubborn trait=greedy trait=gregarious
+	disallow_random_traits = yes
+	565.4.1={ 
+		birth=yes trait=creature_goblin 
+	}
+	590.1.1={
+		effect={
+			set_variable = { name = wc_dexterity_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_2_physical_trait_value }
+		}
+		# trait=physical_lifestyle_dexterity_2
+		# trait=physical_lifestyle_strength_2
+	}
+	598.3.17={ #When Edwin gets land in Westfall, Sneed joins the defias brotherhood
+		religion = masonry
+        employer = 5811
+		effect = { #Because of their different cultures, they had low opinions of each other, this should fix it.
+			add_opinion = {
+				target = character:5811
+				modifier = hired_me_opinion
+				opinion = +80
+			}
+		}		
+    }
+	608.4.11={ death=yes } #Dies when Edwin VanCleef does
+}

@@ -97,3 +97,6 @@
  nick_the_patriarch:0 "[CHARACTER.Custom('DE_ART_DEF_S_N')] Patriarch"
  nick_the_flagellant:0 "[CHARACTER.Custom('DE_ART_DEF_S_N')] Flagellant[CHARACTER.Custom('DE_END_NOU_S_GS_N')]"
  nick_the_bloodcursed:0 "[CHARACTER.Custom('DE_ART_DEF_S_N')] Blutverfluchte"
+ 
+ nick_mr_smite:0 "Handlanger Pein"
+ nick_the_cook:0 "der Smutje"

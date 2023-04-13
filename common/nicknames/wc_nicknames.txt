@@ -119,3 +119,6 @@ nick_the_thunderbringer = {
 # nick_nzoth = {}
 # nick_yogg_saron = {}
 # nick_yshaarj = {}
+
+nick_mr_smite = {}
+nick_the_cook = {}
