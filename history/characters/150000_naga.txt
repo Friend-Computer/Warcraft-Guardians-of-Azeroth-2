@@ -15,7 +15,7 @@
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -41,7 +41,7 @@
 	25.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -68,7 +68,7 @@
 	25.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -92,15 +92,14 @@
 		# trait=physical_lifestyle_endurance_2
 		# trait=physical_lifestyle_strength_2
 	}
-	#Commented out the purging of this character so that the Twilight Hammer Orcs in Blackfathom Deeps could use him as their liege
-	#25.1.1={
-	#	effect = {
-	#		if = {
-	#			limit = { NOT = { current_date >= 603.1.1 } }
-	#			purge_historical_character_effect = yes
-	#		}
-	#	}
-	#}
+	25.1.1={
+		effect = {
+			if = {
+				limit = { NOT = { game_start_date >= 603.1.1 } }
+				purge_historical_character_effect = yes
+			}
+		}
+	}
 	881.3.27={ death=yes }
 }
 150126={
@@ -115,7 +114,7 @@
 	350.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -132,7 +131,7 @@
 	350.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -149,7 +148,7 @@
 	350.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -166,7 +165,7 @@
 	550.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -183,7 +182,7 @@
 	550.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -201,7 +200,7 @@
 	25.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -219,7 +218,7 @@
 	350.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -236,7 +235,7 @@
 	350.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -259,7 +258,7 @@
 	25.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -286,7 +285,7 @@
 	25.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -315,7 +314,7 @@
 	25.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -343,7 +342,7 @@
 	25.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
@@ -369,7 +368,7 @@
 	25.1.1={
 		effect = {
 			if = {
-				limit = { NOT = { current_date >= 603.1.1 } }
+				limit = { NOT = { game_start_date >= 603.1.1 } }
 				purge_historical_character_effect = yes
 			}
 		}
