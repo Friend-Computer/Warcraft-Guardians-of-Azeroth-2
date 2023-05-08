@@ -139,3 +139,4 @@ nick_the_spellweaver = {}
 ### Dungeon Characters ###
 nick_mr_smite = {}
 nick_the_cook = {}
+nick_the_coldbringer = {}

@@ -1545,10 +1545,10 @@ warsong3 = { name = "dynn_Laughinglash" culture = warsong }
 # 	name = "dynn_Doomfang"
 # 	culture = stormreaver
 # }
-# 2386 = {
-# 	name = "dynn_Fireeye"
-# 	culture = stormreaver
-# }
+2386 = {
+	name = "dynn_Fireeye"
+	culture = stormreaver
+}
 # 2387 = {
 # 	name = "dynn_Doommaw" 
 # 	culture = stormreaver

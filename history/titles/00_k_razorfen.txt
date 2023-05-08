@@ -22,7 +22,7 @@ d_razorfen = {
 	492.12.21={holder=160172} #Bar[112001]
 	536.07.08={holder=160180} #Hegg[112001]
 	562.06.02={holder=160182} #Snokh[112001]
-	588.10.10={holder=160185} #Zaljazk[112001]
+	588.10.10={holder=charlga_razorflank} 
 }
 c_razorfen = {
 	# d_razorfen
@@ -47,7 +47,7 @@ c_razorfen = {
 	492.12.21={holder=160172} #Bar[112001]
 	536.07.08={holder=160180} #Hegg[112001]
 	562.06.02={holder=160182} #Snokh[112001]
-	588.10.10={holder=160185} #Zaljazk[112001]
+	588.10.10={holder=charlga_razorflank} 
 }
 c_blackthorn = {
 	# d_razorfen
@@ -95,7 +95,7 @@ c_agamagar = {
 	492.12.21={holder=160172} #Bar[112001]
 	536.07.08={holder=160180} #Hegg[112001]
 	562.06.02={holder=160182} #Snokh[112001]
-	588.10.10={holder=160185} #Zaljazk[112001]
+	588.10.10={holder=charlga_razorflank} 
 }
 c_brambleblade = {
 	1.1.1={
@@ -145,7 +145,7 @@ c_shartask = {
 	492.12.21={holder=160172} #Bar[112001]
 	536.07.08={holder=160180} #Hegg[112001]
 	562.06.02={holder=160182} #Snokh[112001]
-	588.10.10={holder=160185} #Zaljazk[112001]
+	588.10.10={holder=charlga_razorflank} 
 }
 d_downs = {
 	800.1.1={
